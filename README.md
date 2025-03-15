@@ -16,14 +16,14 @@ Where:
 - `constraints`: Constraints (e.g., sum of weights = 1 for portfolio optimization)
 
 Files:
-- config.json: contains necessary params for code execution
-- tickers_list.csv: contains tickers for consideration and download
-- bl_views: Black-Litterman absolute views dictionary
+- *config.json*: contains necessary params for code execution
+- *tickers_list.csv*: contains tickers for consideration and download
+- *bl_views*: Black-Litterman absolute views dictionary
 
 Usage:
 <bash>
-pip install requirements.txt
-python3 portfolio_optimization.py
+- pip install requirements.txt
+- python3 portfolio_optimization.py
 
 Improvements (IN PROGRESS)
 - Supports a Risk-Free Asset (risk_free_rate). 
