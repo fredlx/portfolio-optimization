@@ -1,0 +1,14 @@
+{
+    "production": "False",
+    "file_path": "data/",
+    "file_name": "tickers.csv",
+    "start_date": "None",
+    "end_date": "2024-12-31",
+    "allow_short_selling": "False",
+    "leverage_limit": "None", 
+    "target_risk": "None",
+    "target_return": 0.002,
+    "lookback": 30,
+    "min_periods": 10,
+    "delta": 2.5
+}
