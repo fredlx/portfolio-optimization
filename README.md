@@ -18,7 +18,7 @@ Where:
 Files:
 - *config.json*: contains necessary params for code execution
 - *tickers_list.csv*: contains tickers for consideration and download
-- *bl_views*: Black-Litterman absolute views dictionary
+- *bl_views.csv*: Black-Litterman absolute views dictionary
 
 Usage:
 <bash>
@@ -38,30 +38,43 @@ Improvements (IN PROGRESS)
     - Regularizes cov_matrix to prevent computational errors.
 
 
+## Optimization Strategies
 
-## Equal Weights Portfolio (EWP)
+### Equal Weights Portfolio (EWP)
 - Goal: Determine equal weights across assets (Baseline)
 - Approach: For a given number of assets assign equal weights to each one 
 
-## Momentum Based Portfolio (MOM)
+### Momentum Based Portfolio (MOM)
 - Goal: Determine weights based on past performance
 - Approach: Given a time window allocate weights considering performance contribution
 
-## Mean-Variance Optimization (MVO)
+### Volatility Portfolio (VOL)
+- Goal: Allocates more weight to lower-volatility assets (inverse volatility strategy).
+
+### Mean-Variance Optimization (MVO)
 - Goal: Maximize return for a given level of risk OR minimize risk for a given level of return (Markowitz Modern Portfolio Theory).
 - Approach: Uses expected returns, variances (risk), and covariances (correlations) of asset returns to determine the optimal asset allocation.
 
-## Risk Parity Portfolio (RPP)
+### Black-Litterman Optimization (BLO)
+- Goals: combines Modern Portfolio Theory (MPT) with investor views to create a more stable and intuitive asset allocation.
+- Approach: Uses market equilibrium returns as a starting point, blends in investor views and levels of confidence in a controlled way to produce more stable and diversified portfolios.
+
+### Risk Parity Portfolio (RPP)
 - Goal: Allocate assets so that each contributes an equal proportion of total portfolio risk, rather than equal capital allocation.
 - Approach: Assigns higher weights to lower-volatility assets and lower weights to higher-volatility assets, ensuring that each asset's risk contribution is the same.
 
-## Maximum Diversification Portfolio (MDP)
+### Maximum Diversification Portfolio (MDP)
 - Goal: Maximize the diversification ratio, which is the ratio of weighted asset volatilities to total portfolio volatility.
 - Approach: Uses volatilities and the covariance matrix (not just correlation) to construct a portfolio that achieves the highest diversification benefit by spreading risk across less correlated assets.
+
+### Minimum Variance Portfolio (MVP)
+- Goal: aims to minimize overall portfolio risk (volatility) regardless of expected returns.
+- Approach: Uses the covariance matrix to find the most stable allocation. It does not consider expected returns—only risk (volatility).
 
 
 
 # ToDos
+- Allocation and Rebalancing Engines
 - Dash App
 - Refactoring for efficiency since functions perform same computation (calculate returns, cov_matrix, etc)
 - Some magic numbers still present (delta, min_periods)
