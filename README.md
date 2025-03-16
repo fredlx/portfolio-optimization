@@ -4,8 +4,8 @@ Takes list of tickers, downloads price data, calculates portfolio weights based 
 
 Uses the general-purpose optimization function (solver) in SciPy’s optimization module that finds the minimum of an objective function. 
 
-`from scipy.optimize import minimize`
-`result = minimize(fun, x0, args=(), method='SLSQP', bounds=None, constraints=None)`
+> `from scipy.optimize import minimize`
+> `result = minimize(fun, x0, args=(), method='SLSQP', bounds=None, constraints=None)`
 
 Where:
 - `fun`: Objective function to minimize.
