@@ -22,7 +22,7 @@ Files:
 
 Usage:
 <bash>
-- pip install requirements.txt
+- pip install -r requirements.txt
 - python3 portfolio_optimization.py
 
 Improvements (IN PROGRESS)
